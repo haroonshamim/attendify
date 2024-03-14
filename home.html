@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        } 
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        .container input[type="text"], .container input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .container button {
+            background-color: #cdc086;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendify</h1>
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="Student1" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" required>
+
+        <button onclick="login()">Login</button>
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('Student1').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                alert('Login successful');
+                window.location.href = "courses.html?username=" + encodeURIComponent(username);
+            } else {
+                alert('Please fill in both fields');
+            }
+        }
+    </script>
+</body>
+</html>

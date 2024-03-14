@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>endify - Course Details</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        .course-container { 
+            width: 600px; 
+            padding: 16px; 
+            background-color: white; 
+            margin: 0 auto; 
+            margin-top: 50px; 
+            border: 1px solid black; 
+            border-radius: 4px; 
+            margin-bottom: 20px; 
+        }
+        .course-title { 
+            font-size: 1.5rem;
+            margin-top: 0; 
+        } 
+        .course-details { 
+            font-size: 0.9rem; 
+            color: gray; 
+            margin-top: 5px; 
+        } 
+        .attend-button { 
+            background-color: #cdc086; 
+            color: white; 
+            padding: 6px 12px; 
+            margin-top: 10px; 
+            border: none; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: inline-block; 
+        } 
+    </style>
+</head> 
+<body> 
+    <h1>Course Details</h1> 
+    <div class="course-container"> 
+        <a class="course-title" href="courses.html">Random Course 1</a> 
+        <div class="course-details"> 
+            <span>Timing: 10:00 AM - 11:30 AM</span> <br>
+            <span>Location: Room 101</span> <br>
+            <span>Instructor: John Doe</span><br>
+            <span>Description: This is a course about random things.</span>
+        </div> 
+        <button class="attend-button" onclick="changeButtonText()">Attend</button> 
+    </div>
+    
+    <script>
+        function changeButtonText() {
+            var attendButton = document.querySelector('.attend-button');
+            attendButton.innerText = "I have attended the class";
+        }
+    </script>
+</body> 
+</html>
